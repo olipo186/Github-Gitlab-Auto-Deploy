@@ -1,11 +1,12 @@
-import collections
+import six
+from six.moves import collections_abc
 from ..wrappers import GitWrapper
 from ..lock import Lock
 from ..wrappers import GitWrapper
 from ..events import DeployEvent
 
 
-class Project(collections.MutableMapping):
+class Project(collections_abc.MutableMapping):
 
     """A dictionary that applies an arbitrary key-altering
        function before accessing the keys"""
